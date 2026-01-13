@@ -15,7 +15,7 @@ export function StructuredData() {
     },
     alumniOf: {
       "@type": "CollegeOrUniversity",
-      name: "Your University Name",
+      name: "Universitas Singaperbangsa Karawang",
     },
     knowsAbout: [
       "React.js",
