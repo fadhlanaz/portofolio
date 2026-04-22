@@ -26,12 +26,12 @@ export function Contact() {
     tl.fromTo(
       titleRef.current,
       { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8 }
+      { y: 0, opacity: 1, duration: 0.8 },
     ).fromTo(
       contentRef.current,
       { y: 30, opacity: 0 },
       { y: 0, opacity: 1, duration: 0.6 },
-      "-=0.4"
+      "-=0.4",
     );
   }, []);
 
@@ -65,11 +65,11 @@ export function Contact() {
             </a>
 
             <a
-              href="https://github.com/Fadhlan54"
+              href="https://github.com/fadhlanaz"
               className="flex items-center justify-center gap-3 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
             >
               <Github size={24} />
-              <span>github.com/Fadhlan54</span>
+              <span>github.com/fadhlanaz</span>
             </a>
           </div>
 

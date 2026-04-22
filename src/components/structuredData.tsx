@@ -7,7 +7,7 @@ export function StructuredData() {
     url: "https://yourdomain.com",
     sameAs: [
       "https://linkedin.com/in/muhammad-fadhlan-aziz",
-      "https://github.com/Fadhlan54",
+      "https://github.com/fadhlanaz",
     ],
     worksFor: {
       "@type": "Organization",

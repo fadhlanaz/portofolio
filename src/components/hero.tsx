@@ -23,19 +23,19 @@ export function Hero() {
     tl.fromTo(
       titleRef.current,
       { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }
+      { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" },
     )
       .fromTo(
         subtitleRef.current,
         { y: 30, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" },
-        "-=0.4"
+        "-=0.4",
       )
       .fromTo(
         buttonRef.current,
         { y: 20, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
-        "-=0.3"
+        "-=0.3",
       );
   }, []);
 
@@ -124,7 +124,7 @@ export function Hero() {
             <span>{t("location")}</span>
           </div>
           <a
-            href="https://github.com/Fadhlan54"
+            href="https://github.com/fadhlanaz"
             className="flex items-center gap-2 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
           >
             <Github size={16} />
