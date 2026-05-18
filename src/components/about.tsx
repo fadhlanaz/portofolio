@@ -59,6 +59,7 @@ export function About() {
       "Express.js",
       "GoFiber",
       "Laravel",
+      "Vite",
     ],
     databaseTools: [
       "PostgreSQL",
@@ -68,12 +69,12 @@ export function About() {
       "Git",
       "Docker",
       "AWS (EC2, RDS, S3)",
-      "Shadcn",
+      "Module Federation",
       "Redux",
       "Midtrans API",
       "RajaOngkir API",
     ],
-    uiuxTesting: ["Figma", "Jest", "React Testing Library"],
+    uiuxTesting: ["Figma", "Ant Design", "Shadcn", "Jest", "React Testing Library"],
   };
 
   return (

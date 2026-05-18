@@ -109,7 +109,7 @@ export function Hero() {
             {t("contactMe")}
           </a>
           <a
-            href="/cv-muhammad-fadhlan-aziz.pdf"
+            href="/pdf/CV_Muhammad_Fadhlan_Aziz.pdf"
             download
             className="flex items-center gap-2 border border-primary-600 text-primary-600 dark:text-primary-400 dark:border-primary-400 px-6 py-3 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors"
           >
@@ -125,6 +125,8 @@ export function Hero() {
           </div>
           <a
             href="https://github.com/fadhlanaz"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
           >
             <Github size={16} />
@@ -132,6 +134,8 @@ export function Hero() {
           </a>
           <a
             href="https://linkedin.com/in/muhammad-fadhlan-aziz"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
           >
             <Linkedin size={16} />

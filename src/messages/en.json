@@ -22,8 +22,8 @@
   },
   "About": {
     "title": "About Me",
-    "description1": "Fresh Graduate in Informatics with strong foundation in web development and software engineering. Skilled in React.js, Next.js, Golang, and Express.js.",
-    "description2": "Experienced in building scalable applications, integrating APIs, and writing unit tests. Adaptable, collaborative, and eager to grow in fast-paced software development environments.",
+    "description1": "Software Developer with a strong foundation in web development and software engineering. Currently working at PT NTT Indonesia Technology, assigned to PT Bank Negara Indonesia (Persero) Tbk. Skilled in React.js, Next.js, TypeScript, Golang, and Express.js.",
+    "description2": "Experienced in building scalable applications with Microfrontend architecture, integrating APIs, and writing unit tests. Adaptable, collaborative, and passionate about delivering high-quality software solutions.",
     "languagesFrameworks": "Languages & Frameworks",
     "databaseTools": "Database & Tools",
     "uiuxTesting": "UI/UX & Testing"
@@ -115,8 +115,26 @@
       }
     ]
   },
-  "Experience": {
+  "WorkExperience": {
     "title": "Work Experience",
+    "list": [
+      {
+        "title": "Software Developer",
+        "company": "PT NTT Indonesia Technology (Assigned at PT Bank Negara Indonesia (Persero) Tbk.)",
+        "period": "Jan 2026 – Current",
+        "location": "Jakarta, Indonesia",
+        "project": "BNI Icons (Teller App)",
+        "achievements": [
+          "Played a key role in migrating the legacy teller system from a monolithic architecture to a scalable Microfrontend architecture using Vite and Module Federation.",
+          "Developed and integrated key financial modules, including module deposit, loan, and the main host app, utilizing React.js and TypeScript.",
+          "Designed and implemented clean, responsive user interfaces across the application using Ant Design to ensure an efficient and consistent experience for bank tellers.",
+          "Optimized application performance and system reliability by implementing Progressive Web App (PWA) caching strategies."
+        ]
+      }
+    ]
+  },
+  "InternshipExperience": {
+    "title": "Internship Experience",
     "list": [
       {
         "title": "Frontend Developer (Part-time)",
@@ -160,7 +178,7 @@
     "location": "Bogor, West Java"
   },
   "Footer": {
-    "copyright": "© 2025 Muhammad Fadhlan Aziz. All rights reserved.",
+    "copyright": "© 2026 Muhammad Fadhlan Aziz. All rights reserved.",
     "builtWith": "Built with Next.js, Tailwind CSS, and GSAP"
   }
 }

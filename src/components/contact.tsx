@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import { Mail, MapPin, Github, Linkedin } from "lucide-react";
+import { Mail, MapPin, Github, Linkedin, Instagram } from "lucide-react";
 import gsap from "gsap";
 import { useTranslations } from "next-intl";
 import SectionTitle from "./elements/sectionTitle";
@@ -53,7 +53,7 @@ export function Contact() {
 
         <div
           ref={contentRef}
-          className="grid md:grid-cols-2 gap-6 md:gap-8 mb-12"
+          className="grid md:grid-cols-2 gap-6 md:gap-8 mb-6 md:mb-8"
         >
           <div className="space-y-4 md:space-y-6">
             <a
@@ -66,6 +66,8 @@ export function Contact() {
 
             <a
               href="https://github.com/fadhlanaz"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-center gap-3 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
             >
               <Github size={24} />
@@ -76,16 +78,30 @@ export function Contact() {
           <div className="space-y-4 md:space-y-6">
             <a
               href="https://linkedin.com/in/muhammad-fadhlan-aziz"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-center gap-3 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
             >
               <Linkedin size={24} />
               <span>linkedin.com/in/muhammad-fadhlan-aziz</span>
             </a>
 
-            <div className="flex items-center justify-center gap-3 text-gray-700 dark:text-gray-300">
-              <MapPin size={24} />
-              <span>{t("location")}</span>
-            </div>
+            <a
+              href="https://instagram.com/fadhlanaz_"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-3 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+            >
+              <Instagram size={24} />
+              <span>@fadhlanaz_</span>
+            </a>
+          </div>
+        </div>
+
+        <div className="flex justify-center mb-12">
+          <div className="flex items-center justify-center gap-3 text-gray-700 dark:text-gray-300">
+            <MapPin size={24} />
+            <span>{t("location")}</span>
           </div>
         </div>
 

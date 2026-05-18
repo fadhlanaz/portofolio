@@ -4,14 +4,14 @@ export function StructuredData() {
     "@type": "Person",
     name: "Muhammad Fadhlan Aziz",
     jobTitle: "Fullstack Web Developer",
-    url: "https://yourdomain.com",
+    url: "https://www.fadhlanaz.my.id",
     sameAs: [
       "https://linkedin.com/in/muhammad-fadhlan-aziz",
       "https://github.com/fadhlanaz",
     ],
     worksFor: {
       "@type": "Organization",
-      name: "PT Telkom Indonesia",
+      name: "PT NTT Indonesia Technology",
     },
     alumniOf: {
       "@type": "CollegeOrUniversity",

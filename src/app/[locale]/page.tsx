@@ -39,13 +39,16 @@ export default function Home() {
       <Navigation />
       <Hero />
       <About />
-      <Projects />
       <Experience />
+      <Projects />
       <Contact />
 
-      <footer className="bg-primary-600 border-t border-gray-200 dark:bg-gray-900 text-white py-4 text-center text-sm">
-        <div className="max-w-6xl mx-auto px-4">
-          <p>{t("copyright")}</p>
+      <footer className="bg-gray-900 border-t border-gray-800 text-white py-4">
+        <div className="mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-2 text-sm text-gray-500">
+            <p>{t("copyright")}</p>
+            <p>{t("builtWith")}</p>
+          </div>
         </div>
       </footer>
     </main>

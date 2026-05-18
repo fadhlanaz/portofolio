@@ -55,9 +55,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "your-google-search-console-verification-code",
-  },
+  // verification: {
+  //   google: "YOUR_ACTUAL_VERIFICATION_CODE",
+  // },
 };
 
 export default async function LocaleLayout({

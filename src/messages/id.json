@@ -22,8 +22,8 @@
   },
   "About": {
     "title": "Tentang Saya",
-    "description1": "Lulusan Fresh Graduate Informatika dengan dasar kuat dalam pengembangan web dan rekayasa perangkat lunak. Terampil dalam React.js, Next.js, Golang, dan Express.js.",
-    "description2": "Berpengalaman dalam membangun aplikasi yang scalable, mengintegrasikan API, dan menulis unit test. Adaptif, kolaboratif, dan bersemangat untuk berkembang di lingkungan pengembangan perangkat lunak yang cepat.",
+    "description1": "Software Developer dengan dasar kuat dalam pengembangan web dan rekayasa perangkat lunak. Saat ini bekerja di PT NTT Indonesia Technology, ditugaskan di PT Bank Negara Indonesia (Persero) Tbk. Terampil dalam React.js, Next.js, TypeScript, Golang, dan Express.js.",
+    "description2": "Berpengalaman dalam membangun aplikasi scalable dengan arsitektur Microfrontend, mengintegrasikan API, dan menulis unit test. Adaptif, kolaboratif, dan bersemangat untuk menghadirkan solusi perangkat lunak berkualitas tinggi.",
     "languagesFrameworks": "Bahasa & Framework",
     "databaseTools": "Database & Tools",
     "uiuxTesting": "UI/UX & Testing"
@@ -115,8 +115,26 @@
       }
     ]
   },
-  "Experience": {
+  "WorkExperience": {
     "title": "Pengalaman Kerja",
+    "list": [
+      {
+        "title": "Software Developer",
+        "company": "PT NTT Indonesia Technology (Ditugaskan di PT Bank Negara Indonesia (Persero) Tbk.)",
+        "period": "Jan 2026 – Sekarang",
+        "location": "Jakarta, Indonesia",
+        "project": "BNI Icons (Teller App)",
+        "achievements": [
+          "Berperan penting dalam migrasi sistem teller lama dari arsitektur monolitik ke arsitektur Microfrontend yang scalable menggunakan Vite dan Module Federation.",
+          "Mengembangkan dan mengintegrasikan modul keuangan utama, termasuk modul deposit, loan, dan host app utama, menggunakan React.js dan TypeScript.",
+          "Mendesain dan mengimplementasikan antarmuka pengguna yang bersih dan responsif di seluruh aplikasi menggunakan Ant Design untuk memastikan pengalaman yang efisien dan konsisten bagi teller bank.",
+          "Mengoptimalkan performa aplikasi dan keandalan sistem dengan mengimplementasikan strategi caching Progressive Web App (PWA)."
+        ]
+      }
+    ]
+  },
+  "InternshipExperience": {
+    "title": "Pengalaman Magang",
     "list": [
       {
         "title": "Frontend Developer (Paruh Waktu)",
@@ -160,7 +178,7 @@
     "location": "Bogor, Jawa Barat"
   },
   "Footer": {
-    "copyright": "© 2025 Muhammad Fadhlan Aziz. Hak cipta dilindungi.",
+    "copyright": "© 2026 Muhammad Fadhlan Aziz. Hak cipta dilindungi.",
     "builtWith": "Dibangun dengan Next.js, Tailwind CSS, dan GSAP"
   }
 }
