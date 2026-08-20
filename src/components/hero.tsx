@@ -15,7 +15,7 @@ export function Hero() {
   const t = useTranslations("Hero");
   const subtitles = t.raw("subtitles");
 
-  const { currentText, textRef } = useTypewriter(subtitles, 60, 2000);
+  const { currentText } = useTypewriter(subtitles, 60, 2000);
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -42,9 +42,17 @@ export function Hero() {
   return (
     <section
       ref={heroRef}
-      className="min-h-[calc(100dvh-64px)] flex items-center justify-center px-4 sm:px-6 lg:px-8"
+      id="home"
+      className="relative min-h-[calc(100dvh-64px)] flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
-      <div className="max-w-4xl mx-auto text-center">
+      {/* Aurora Gradient Mesh Background */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden -z-10">
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary-500/20 dark:bg-primary-500/10 rounded-full blur-3xl mix-blend-multiply dark:mix-blend-screen filter animate-blob" />
+        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-indigo-500/15 dark:bg-indigo-500/10 rounded-full blur-3xl mix-blend-multiply dark:mix-blend-screen filter animate-blob animation-delay-2000" />
+        <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-teal-500/15 dark:bg-teal-500/10 rounded-full blur-3xl mix-blend-multiply dark:mix-blend-screen filter animate-blob animation-delay-4000" />
+      </div>
+
+      <div className="relative max-w-4xl mx-auto text-center z-10">
         {/* Profile Image Placeholder */}
 
         <div className="relative w-32 h-32 mx-auto mb-4 animate-float">
@@ -88,13 +96,6 @@ export function Hero() {
         >
           <span className="align-middle">{currentText}</span>
           <span className="ml-1 w-1 h-6 inline-block bg-primary-500 animate-pulse align-middle"></span>
-        </div>
-
-        <div className="text-center mb-6">
-          <p
-            ref={textRef}
-            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto "
-          ></p>
         </div>
 
         <div

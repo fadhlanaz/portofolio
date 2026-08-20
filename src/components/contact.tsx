@@ -3,13 +3,18 @@
 import React, { useEffect, useRef } from "react";
 import { Mail, MapPin, Github, Linkedin, Instagram } from "lucide-react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTranslations } from "next-intl";
 import SectionTitle from "./elements/sectionTitle";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function Contact() {
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
-  const contentRef = useRef(null);
+  const descRef = useRef(null);
+  const linksRef = useRef(null);
+  const buttonRef = useRef(null);
 
   const t = useTranslations("Contact");
 
@@ -27,12 +32,25 @@ export function Contact() {
       titleRef.current,
       { y: 50, opacity: 0 },
       { y: 0, opacity: 1, duration: 0.8 },
-    ).fromTo(
-      contentRef.current,
-      { y: 30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.6 },
-      "-=0.4",
-    );
+    )
+      .fromTo(
+        descRef.current,
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.6 },
+        "-=0.4",
+      )
+      .fromTo(
+        linksRef.current,
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.6 },
+        "-=0.4",
+      )
+      .fromTo(
+        buttonRef.current,
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.6 },
+        "-=0.4",
+      );
   }, []);
 
   return (
@@ -45,14 +63,14 @@ export function Contact() {
         <SectionTitle>{t("title")}</SectionTitle>
 
         <p
-          ref={contentRef}
+          ref={descRef}
           className="md:text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto"
         >
           {t("description")}
         </p>
 
         <div
-          ref={contentRef}
+          ref={linksRef}
           className="grid md:grid-cols-2 gap-6 md:gap-8 mb-6 md:mb-8"
         >
           <div className="space-y-4 md:space-y-6">
@@ -105,7 +123,7 @@ export function Contact() {
           </div>
         </div>
 
-        <div ref={contentRef}>
+        <div ref={buttonRef}>
           <a
             href="mailto:muhammadfadhlan0011@gmail.com"
             className="inline-flex items-center gap-2 bg-primary-600 text-white px-8 py-3 rounded-lg hover:bg-primary-700 transition-colors md:text-lg"

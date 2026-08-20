@@ -11,6 +11,7 @@ import { Tooltip } from "react-tooltip";
 export function Navigation() {
   const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
   const { theme, setTheme } = useTheme();
   const t = useTranslations("Navigation");
   const router = useRouter();
@@ -18,6 +19,33 @@ export function Navigation() {
 
   useEffect(() => {
     setMounted(true);
+
+    const sections = ["home", "about", "projects", "experience", "contact"];
+    const observers = sections.map((id) => {
+      const el = document.getElementById(id);
+      if (!el) return null;
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setActiveSection(`#${id}`);
+          }
+        },
+        {
+          rootMargin: "-30% 0px -50% 0px",
+        },
+      );
+      observer.observe(el);
+      return { observer, el };
+    });
+
+    return () => {
+      observers.forEach((item) => {
+        if (item) {
+          item.observer.unobserve(item.el);
+        }
+      });
+    };
   }, []);
 
   if (!mounted) return null;
@@ -34,8 +62,8 @@ export function Navigation() {
 
   const navItems = [
     { href: "#about", label: t("about") },
-    { href: "#projects", label: t("projects") },
     { href: "#experience", label: t("experience") },
+    { href: "#projects", label: t("projects") },
     { href: "#contact", label: t("contact") },
   ];
 
@@ -56,15 +84,25 @@ export function Navigation() {
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors px-3 py-2"
-                >
-                  {item.label}
-                </a>
-              ))}
+              {navItems.map((item) => {
+                const isActive = activeSection === item.href;
+                return (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className={`relative text-sm font-medium transition-colors px-3 py-2 ${
+                      isActive
+                        ? "text-primary-600 dark:text-primary-400 font-semibold"
+                        : "text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
+                    }`}
+                  >
+                    {item.label}
+                    {isActive && (
+                      <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-primary-600 dark:bg-primary-400 rounded-full animate-fade-in" />
+                    )}
+                  </a>
+                );
+              })}
 
               {/* Language Switcher */}
               <div className="flex items-center border-l border-gray-200 dark:border-gray-700 pl-4 ml-4">
@@ -144,16 +182,23 @@ export function Navigation() {
           {isOpen && (
             <div className="md:hidden border-t border-gray-200 dark:border-gray-800 py-4">
               <div className="flex flex-col space-y-4">
-                {navItems.map((item) => (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors py-2"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.label}
-                  </a>
-                ))}
+                {navItems.map((item) => {
+                  const isActive = activeSection === item.href;
+                  return (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      className={`text-sm font-medium transition-colors py-2 pl-2 ${
+                        isActive
+                          ? "text-primary-600 dark:text-primary-400 border-l-2 border-primary-600 dark:border-primary-400 font-semibold"
+                          : "text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
+                      }`}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.label}
+                    </a>
+                  );
+                })}
                 <a
                   href="/pdf/CV_Muhammad_Fadhlan_Aziz.pdf"
                   download

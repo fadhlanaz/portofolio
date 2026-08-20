@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
+import { useEffect, useState } from "react";
 
 export function useTypewriter(
   taglines: string[],
@@ -12,8 +11,6 @@ export function useTypewriter(
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopCount, setLoopCount] = useState(0);
-
-  const textRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
     const currentTagline = taglines[currentIndex];
@@ -42,17 +39,8 @@ export function useTypewriter(
       isDeleting ? speed / 2 : speed
     );
 
-    // GSAP animation for cursor
-    if (textRef.current) {
-      gsap.to(textRef.current, {
-        opacity: 1,
-        duration: 0.3,
-        ease: "power2.out",
-      });
-    }
-
     return () => clearTimeout(timer);
   }, [currentText, isDeleting, currentIndex, taglines, speed, delay]);
 
-  return { currentText, textRef, loopCount };
+  return { currentText, loopCount };
 }
