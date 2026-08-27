@@ -82,7 +82,9 @@ export function Navigation() {
             <div className="flex-shrink-0">
               <Link
                 href="/"
-                className="text-2xl font-bold text-primary-600 dark:text-primary-500"
+                className={`nav-logo font-bold text-primary-600 dark:text-primary-500 ${
+                  aesthetic === "retro" ? "text-xl" : "text-2xl"
+                }`}
               >
                 Fadhlan
               </Link>

@@ -96,20 +96,41 @@ export function RetroSprites() {
         />
       </div>
 
-      {/* Mega Man Dance (Static in the bottom-left corner) */}
+      {/* Pikachu Hi (Static in the bottom-left corner, flipped) */}
       <div
         className="absolute left-4"
         style={{
-          width: "42px",
-          height: "42px",
+          width: "48px",
+          height: "48px",
+          bottom: "-1px",
+          left: "4px",
+        }}
+      >
+        <Image
+          src="/images/gif/pikachu-hi.gif"
+          alt="Pikachu Hi"
+          width={48}
+          height={48}
+          className="pixelated object-contain"
+          style={{ transform: "scaleX(-1)" }} // Flip horizontally
+          unoptimized
+        />
+      </div>
+
+      {/* Mega Man Dance (Static shifted towards the center) */}
+      <div
+        className="absolute left-[20%]"
+        style={{
+          width: "40px",
+          height: "40px",
           bottom: "0px",
         }}
       >
         <Image
           src="/images/gif/mega-man-dance.gif"
           alt="Mega Man Dance"
-          width={42}
-          height={42}
+          width={40}
+          height={40}
           className="pixelated object-contain"
           unoptimized
         />
@@ -130,6 +151,26 @@ export function RetroSprites() {
           alt="Hi There"
           width={48}
           height={48}
+          className="pixelated object-contain"
+          unoptimized
+        />
+      </div>
+
+      {/* Bulbasaur Rolling (Rolling from right to left) */}
+      <div
+        className="absolute"
+        style={{
+          animation: "walk-left 10s linear infinite",
+          width: "32px",
+          height: "32px",
+          bottom: "-2px",
+        }}
+      >
+        <Image
+          src="/images/gif/bulbasaur-rolling.gif"
+          alt="Bulbasaur Rolling"
+          width={32}
+          height={32}
           className="pixelated object-contain"
           unoptimized
         />
