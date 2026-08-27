@@ -186,13 +186,13 @@ section[id] {
 
 /* Retro theme colors (Light Mode) */
 html.theme-retro {
-  --background: 43 37% 90%;      /* Soft GameBoy-like beige background */
-  --foreground: 0 0% 10%;         /* Solid dark brown-black text */
-  --border: 0 0% 0%;             /* Sharp black borders */
-  
+  --background: 43 37% 90%; /* Soft GameBoy-like beige background */
+  --foreground: 0 0% 10%; /* Solid dark brown-black text */
+  --border: 0 0% 0%; /* Sharp black borders */
+
   --primary-50: #fef3c7;
   --primary-100: #fde68a;
-  --primary-500: #d97706;        /* Retro arcade orange */
+  --primary-500: #d97706; /* Retro arcade orange */
   --primary-600: #b45309;
   --primary-700: #92400e;
   --primary-800: #78350f;
@@ -201,13 +201,13 @@ html.theme-retro {
 
 /* Retro theme colors (Dark Mode) */
 html.theme-retro.dark {
-  --background: 120 40% 4%;      /* Deep Terminal Greenish-Black */
-  --foreground: 120 100% 55%;    /* Bright phosphor neon-green */
-  --border: 120 100% 40%;        /* Sharp green border */
-  
+  --background: 120 40% 4%; /* Deep Terminal Greenish-Black */
+  --foreground: 120 100% 55%; /* Bright phosphor neon-green */
+  --border: 120 100% 40%; /* Sharp green border */
+
   --primary-50: #004d00;
   --primary-100: #008000;
-  --primary-500: #39ff14;        /* Phosphor green */
+  --primary-500: #39ff14; /* Phosphor green */
   --primary-600: #00ff00;
   --primary-700: #00ff00;
   --primary-800: #b3ffb3;
@@ -219,11 +219,11 @@ html.theme-retro::after {
   content: " ";
   display: block;
   position: fixed;
-  top: 0; left: 0; bottom: 0; right: 0;
-  background: linear-gradient(
-    rgba(18, 16, 16, 0) 50%, 
-    rgba(0, 0, 0, 0.08) 50%
-  );
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.08) 50%);
   background-size: 100% 4px;
   z-index: 99999;
   pointer-events: none;
@@ -240,7 +240,10 @@ html.theme-retro::after {
   box-shadow: 4px 4px 0px 0px currentColor !important;
   background-color: hsl(var(--background)) !important;
   color: hsl(var(--foreground)) !important;
-  transition: transform 0.1s, box-shadow 0.1s, color 0.1s !important;
+  transition:
+    transform 0.1s,
+    box-shadow 0.1s,
+    color 0.1s !important;
   transform: translate(0px, 0px);
 }
 
@@ -303,7 +306,6 @@ html.theme-retro::after {
   border-top: 4px solid currentColor !important;
 }
 
-
 /* Experience timeline line */
 .theme-retro .border-l-2,
 .theme-retro .border-l {
@@ -327,7 +329,11 @@ html.theme-retro::after {
 }
 
 .theme-retro .bg-aurora {
-  background-image: radial-gradient(circle, rgba(0,0,0,0.15) 1px, transparent 1px);
+  background-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px
+  );
   background-size: 20px 20px;
 }
 
@@ -409,6 +415,24 @@ html.theme-retro::after {
   image-rendering: crisp-edges;
 }
 
+.sparkle-pixel {
+  position: absolute;
+  background-color: #ffd700;
+  box-shadow: 0 0 6px #ffd700;
+  animation: sparkle-blink 0.8s ease-in-out infinite;
+}
+
+@keyframes sparkle-blink {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
 /* Responsive animations for retro sprites to maintain constant speed across screen widths */
 .animate-kirby {
   animation: walk-left 28s linear infinite;
@@ -433,6 +457,196 @@ html.theme-retro::after {
   animation: walk-left-delayed 6s linear infinite;
   animation-delay: 2s;
 }
+.animate-megaman {
+  animation: megaman-patrol 33.6s linear infinite;
+}
+
+@keyframes megaman-patrol {
+  0% {
+    transform: translateX(20vw);
+  }
+  1.19% {
+    transform: translateX(25vw);
+  }
+  4.17% {
+    transform: translateX(25vw);
+  }
+  5.36% {
+    transform: translateX(30vw);
+  }
+  8.33% {
+    transform: translateX(30vw);
+  }
+  9.52% {
+    transform: translateX(35vw);
+  }
+  12.5% {
+    transform: translateX(35vw);
+  }
+  13.69% {
+    transform: translateX(40vw);
+  }
+  16.67% {
+    transform: translateX(40vw);
+  }
+  17.86% {
+    transform: translateX(45vw);
+  }
+  20.83% {
+    transform: translateX(45vw);
+  }
+  22.02% {
+    transform: translateX(50vw);
+  }
+  25% {
+    transform: translateX(50vw);
+  }
+  26.19% {
+    transform: translateX(55vw);
+  }
+  29.17% {
+    transform: translateX(55vw);
+  }
+  30.36% {
+    transform: translateX(60vw);
+  }
+  33.33% {
+    transform: translateX(60vw);
+  }
+  34.52% {
+    transform: translateX(65vw);
+  }
+  37.5% {
+    transform: translateX(65vw);
+  }
+  38.69% {
+    transform: translateX(70vw);
+  }
+  41.67% {
+    transform: translateX(70vw);
+  }
+  42.86% {
+    transform: translateX(75vw);
+  }
+  45.83% {
+    transform: translateX(75vw);
+  }
+  47.02% {
+    transform: translateX(80vw);
+  }
+  50% {
+    transform: translateX(80vw);
+  }
+  51.19% {
+    transform: translateX(75vw);
+  }
+  54.17% {
+    transform: translateX(75vw);
+  }
+  55.36% {
+    transform: translateX(70vw);
+  }
+  58.33% {
+    transform: translateX(70vw);
+  }
+  59.52% {
+    transform: translateX(65vw);
+  }
+  62.5% {
+    transform: translateX(65vw);
+  }
+  63.69% {
+    transform: translateX(60vw);
+  }
+  66.67% {
+    transform: translateX(60vw);
+  }
+  67.86% {
+    transform: translateX(55vw);
+  }
+  70.83% {
+    transform: translateX(55vw);
+  }
+  72.02% {
+    transform: translateX(50vw);
+  }
+  75% {
+    transform: translateX(50vw);
+  }
+  76.19% {
+    transform: translateX(45vw);
+  }
+  79.17% {
+    transform: translateX(45vw);
+  }
+  80.36% {
+    transform: translateX(40vw);
+  }
+  83.33% {
+    transform: translateX(40vw);
+  }
+  84.52% {
+    transform: translateX(35vw);
+  }
+  87.5% {
+    transform: translateX(35vw);
+  }
+  88.69% {
+    transform: translateX(30vw);
+  }
+  91.67% {
+    transform: translateX(30vw);
+  }
+  92.86% {
+    transform: translateX(25vw);
+  }
+  95.83% {
+    transform: translateX(25vw);
+  }
+  97.02% {
+    transform: translateX(20vw);
+  }
+  100% {
+    transform: translateX(20vw);
+  }
+}
+
+.animate-pacman {
+  animation: pacman-patrol 20s linear infinite;
+}
+
+@keyframes pacman-patrol {
+  0% {
+    transform: translateX(-50px) translateY(0) rotate(0deg);
+  }
+  40% {
+    transform: translateX(100vw) translateY(0) rotate(0deg);
+  }
+  40.01% {
+    transform: translateX(100vw) translateY(0) rotate(-90deg);
+  }
+  45% {
+    transform: translateX(100vw) translateY(-38px) rotate(-90deg);
+  }
+  45.01% {
+    transform: translateX(100vw) translateY(-38px) rotate(180deg);
+  }
+  85% {
+    transform: translateX(-50px) translateY(-38px) rotate(180deg);
+  }
+  85.01% {
+    transform: translateX(-50px) translateY(-38px) rotate(90deg);
+  }
+  90% {
+    transform: translateX(-50px) translateY(0) rotate(90deg);
+  }
+  90.01% {
+    transform: translateX(-50px) translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50px) translateY(0) rotate(0deg);
+  }
+}
 
 @media (max-width: 768px) {
   .animate-kirby {
@@ -456,5 +670,10 @@ html.theme-retro::after {
     animation-duration: 3s;
     animation-delay: 1s;
   }
+  .animate-megaman {
+    animation-duration: 8.4s;
+  }
+  .animate-pacman {
+    animation-duration: 8s;
+  }
 }
-
