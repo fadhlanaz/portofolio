@@ -119,7 +119,7 @@
     "title": "Pengalaman Kerja",
     "list": [
       {
-        "title": "Software Developer",
+        "title": "Software Developer (Purnawaktu)",
         "company": "PT NTT Indonesia Technology (Ditugaskan di PT Bank Negara Indonesia (Persero) Tbk.)",
         "period": "Jan 2026 – Sekarang",
         "location": "Jakarta, Indonesia",
@@ -130,12 +130,7 @@
           "Mendesain dan mengimplementasikan antarmuka pengguna yang bersih dan responsif di seluruh aplikasi menggunakan Ant Design untuk memastikan pengalaman yang efisien dan konsisten bagi teller bank.",
           "Mengoptimalkan performa aplikasi dan keandalan sistem dengan mengimplementasikan strategi caching Progressive Web App (PWA)."
         ]
-      }
-    ]
-  },
-  "InternshipExperience": {
-    "title": "Pengalaman Magang",
-    "list": [
+      },
       {
         "title": "Frontend Developer (Paruh Waktu)",
         "company": "PT Telkom Indonesia (Persero) Tbk",
@@ -146,7 +141,12 @@
           "Mengintegrasikan pipeline GitLab CI untuk testing otomatis",
           "Mengimplementasikan fungsionalitas filtering dalam modul microservice"
         ]
-      },
+      }
+    ]
+  },
+  "InternshipExperience": {
+    "title": "Pengalaman Magang",
+    "list": [
       {
         "title": "Frontend Developer (Magang)",
         "company": "PT Telkom Indonesia (Persero) Tbk",
