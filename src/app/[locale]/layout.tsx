@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Press_Start_2P, Pixelify_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/themeProvider";
+import { AestheticProvider } from "@/components/aestheticProvider";
+import { RetroSprites } from "@/components/retroSprites";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -10,6 +12,15 @@ import { StructuredData } from "@/components/structuredData";
 import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
+const pressStart2P = Press_Start_2P({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-press-start",
+});
+const pixelifySans = Pixelify_Sans({
+  subsets: ["latin"],
+  variable: "--font-pixelify",
+});
 
 export const metadata: Metadata = {
   title: "Muhammad Fadhlan Aziz - Fullstack Web Developer",
@@ -79,11 +90,24 @@ export default async function LocaleLayout({
     <html lang={locale} suppressHydrationWarning>
       <head>
         <StructuredData />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                var theme = localStorage.getItem('aesthetic-theme') || 'modern';
+                document.documentElement.classList.add('theme-' + theme);
+              } catch (e) {}
+            `,
+          }}
+        />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} ${pressStart2P.variable} ${pixelifySans.variable}`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            {children}
+            <AestheticProvider>
+              {children}
+              <RetroSprites />
+            </AestheticProvider>
           </ThemeProvider>
           <Analytics />
         </NextIntlClientProvider>

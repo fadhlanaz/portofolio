@@ -189,7 +189,8 @@ export function Projects() {
                       href={project.demoLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-sm md:text-base gap-2 bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
+                      role="button"
+                      className="inline-flex items-center text-sm md:text-base gap-2 bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
                     >
                       <ExternalLink size={16} />
                       {t("liveDemo")}
@@ -200,7 +201,8 @@ export function Projects() {
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm md:text-base border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                      role="button"
+                      className="inline-flex items-center gap-2 text-sm md:text-base border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
                     >
                       <Github size={16} />
                       {t("sourceCode")}

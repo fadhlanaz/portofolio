@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Sun, Moon, Menu, X, Download, Languages } from "lucide-react";
+import { Sun, Moon, Menu, X, Download, Languages, Gamepad2 } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useAesthetic } from "@/components/aestheticProvider";
 import { useTranslations } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
@@ -13,6 +14,7 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const { theme, setTheme } = useTheme();
+  const { aesthetic, setAesthetic } = useAesthetic();
   const t = useTranslations("Navigation");
   const router = useRouter();
   const pathname = usePathname();
@@ -52,6 +54,10 @@ export function Navigation() {
 
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
+  };
+
+  const toggleAesthetic = () => {
+    setAesthetic(aesthetic === "retro" ? "modern" : "retro");
   };
 
   const changeLanguage = (locale: string) => {
@@ -139,6 +145,15 @@ export function Navigation() {
                 {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
               </button>
 
+              {/* Aesthetic Toggle */}
+              <button
+                onClick={toggleAesthetic}
+                className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer"
+                title={t("toggleAesthetic")}
+              >
+                <Gamepad2 size={20} className={aesthetic === "retro" ? "text-primary-500 animate-pulse" : ""} />
+              </button>
+
               {/* Download CV Button */}
               <a
                 href="/pdf/CV_Muhammad_Fadhlan_Aziz.pdf"
@@ -168,6 +183,13 @@ export function Navigation() {
                 className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800"
               >
                 {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+              </button>
+              <button
+                onClick={toggleAesthetic}
+                className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800"
+                title={t("toggleAesthetic")}
+              >
+                <Gamepad2 size={20} className={aesthetic === "retro" ? "text-primary-500 animate-pulse" : ""} />
               </button>
               <button
                 onClick={() => setIsOpen(!isOpen)}

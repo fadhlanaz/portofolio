@@ -104,7 +104,8 @@ export function Hero() {
         >
           <a
             href="mailto:muhammadfadhlan0011@gmail.com"
-            className="flex items-center gap-2 bg-primary-600 text-white px-6 py-3  rounded-lg hover:bg-primary-700 transition-colors"
+            role="button"
+            className="inline-flex items-center gap-2 bg-primary-600 text-white px-6 py-3  rounded-lg hover:bg-primary-700 transition-colors"
           >
             <Mail size={20} />
             {t("contactMe")}
@@ -112,7 +113,8 @@ export function Hero() {
           <a
             href="/pdf/CV_Muhammad_Fadhlan_Aziz.pdf"
             download
-            className="flex items-center gap-2 border border-primary-600 text-primary-600 dark:text-primary-400 dark:border-primary-400 px-6 py-3 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors"
+            role="button"
+            className="inline-flex items-center gap-2 border border-primary-600 text-primary-600 dark:text-primary-400 dark:border-primary-400 px-6 py-3 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors"
           >
             {t("downloadCV")}
           </a>

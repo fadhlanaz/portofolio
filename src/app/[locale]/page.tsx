@@ -10,11 +10,13 @@ import { Contact } from "@/components/contact";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTranslations } from "next-intl";
+import { useAesthetic } from "@/components/aestheticProvider";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const t = useTranslations("Footer");
+  const { aesthetic } = useAesthetic();
 
   useEffect(() => {
     gsap.utils.toArray("section").forEach((section) => {
@@ -47,6 +49,11 @@ export default function Home() {
         <div className="mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-2 text-sm text-gray-500">
             <p>{t("copyright")}</p>
+            {aesthetic === "retro" && (
+              <p className="text-primary-500 font-mono text-xs animate-pulse">
+                BGM: Adhesive Wombat - Night Shade
+              </p>
+            )}
             <p>{t("builtWith")}</p>
           </div>
         </div>

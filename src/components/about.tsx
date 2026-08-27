@@ -29,19 +29,19 @@ export function About() {
     tl.fromTo(
       titleRef.current,
       { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8 }
+      { y: 0, opacity: 1, duration: 0.8 },
     )
       .fromTo(
         contentRef.current,
         { y: 30, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.6 },
-        "-=0.4"
+        "-=0.4",
       )
       .fromTo(
         skillsRef.current,
         { y: 30, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.6 },
-        "-=0.3"
+        "-=0.3",
       );
   }, []);
 
@@ -74,7 +74,13 @@ export function About() {
       "Midtrans API",
       "RajaOngkir API",
     ],
-    uiuxTesting: ["Figma", "Ant Design", "Shadcn", "Jest", "React Testing Library"],
+    uiuxTesting: [
+      "Figma",
+      "Ant Design",
+      "Shadcn",
+      "Jest",
+      "React Testing Library",
+    ],
   };
 
   return (
