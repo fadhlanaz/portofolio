@@ -408,3 +408,53 @@ html.theme-retro::after {
   image-rendering: pixelated;
   image-rendering: crisp-edges;
 }
+
+/* Responsive animations for retro sprites to maintain constant speed across screen widths */
+.animate-kirby {
+  animation: walk-left 28s linear infinite;
+}
+.animate-mario {
+  animation: walk-right 14s linear infinite;
+  animation-delay: 3s;
+  animation-fill-mode: backwards;
+}
+.animate-sonic {
+  animation: walk-right 7s linear infinite;
+  animation-delay: 6s;
+  animation-fill-mode: backwards;
+}
+.animate-bat {
+  animation: bat-patrol 18s linear infinite;
+}
+.animate-bulbasaur {
+  animation: walk-left 10s linear infinite;
+}
+.animate-mario-smb3 {
+  animation: walk-left-delayed 6s linear infinite;
+  animation-delay: 2s;
+}
+
+@media (max-width: 768px) {
+  .animate-kirby {
+    animation-duration: 10s;
+  }
+  .animate-mario {
+    animation-duration: 5s;
+    animation-delay: 1.5s;
+  }
+  .animate-sonic {
+    animation-duration: 2.5s;
+    animation-delay: 3s;
+  }
+  .animate-bat {
+    animation-duration: 7s;
+  }
+  .animate-bulbasaur {
+    animation-duration: 3.5s;
+  }
+  .animate-mario-smb3 {
+    animation-duration: 3s;
+    animation-delay: 1s;
+  }
+}
+

@@ -13,9 +13,8 @@ export function RetroSprites() {
     <div className="fixed bottom-0 left-0 right-0 h-24 pointer-events-none z-40 overflow-hidden select-none">
       {/* Kirby (Slow) */}
       <div
-        className="absolute"
+        className="absolute animate-kirby"
         style={{
-          animation: "walk-left 28s linear infinite",
           width: "56px",
           height: "56px",
           bottom: "12px",
@@ -34,11 +33,8 @@ export function RetroSprites() {
 
       {/* Mario (Medium) */}
       <div
-        className="absolute"
+        className="absolute animate-mario"
         style={{
-          animation: "walk-right 14s linear infinite",
-          animationDelay: "3s",
-          animationFillMode: "backwards",
           width: "68px",
           height: "68px",
           bottom: "12px",
@@ -56,11 +52,8 @@ export function RetroSprites() {
 
       {/* Sonic (Fast - Resized to match) */}
       <div
-        className="absolute"
+        className="absolute animate-sonic"
         style={{
-          animation: "walk-right 7s linear infinite",
-          animationDelay: "6s",
-          animationFillMode: "backwards",
           width: "40px",
           height: "40px",
           bottom: "8px",
@@ -78,9 +71,8 @@ export function RetroSprites() {
 
       {/* Bat (Flying from right to left, patrolling 75% width, higher up) */}
       <div
-        className="absolute"
+        className="absolute animate-bat"
         style={{
-          animation: "bat-patrol 18s linear infinite",
           width: "48px",
           height: "48px",
           bottom: "48px",
@@ -158,9 +150,8 @@ export function RetroSprites() {
 
       {/* Bulbasaur Rolling (Rolling from right to left) */}
       <div
-        className="absolute"
+        className="absolute animate-bulbasaur"
         style={{
-          animation: "walk-left 10s linear infinite",
           width: "32px",
           height: "32px",
           bottom: "-2px",
@@ -198,10 +189,8 @@ export function RetroSprites() {
 
       {/* SMB3 Mario (Running very fast from right to left with a pause)
       <div
-        className="absolute"
+        className="absolute animate-mario-smb3"
         style={{
-          animation: "walk-left-delayed 6s linear infinite",
-          animationDelay: "2s",
           width: "48px",
           height: "48px",
           bottom: "6px",
