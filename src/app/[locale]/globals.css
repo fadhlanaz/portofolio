@@ -85,6 +85,149 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ==========================================================================
+   CUSTOM SCROLLBARS FOR BOTH THEMES
+   ========================================================================== */
+
+/* 1. MODERN THEME SCROLLBAR (Sleek, Minimalist, Rounded Pill) */
+html:not(.theme-retro),
+html.theme-modern {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+html:not(.theme-retro).dark,
+html.theme-modern.dark {
+  scrollbar-color: #334155 transparent;
+}
+
+html:not(.theme-retro)::-webkit-scrollbar,
+html.theme-modern::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+html:not(.theme-retro)::-webkit-scrollbar-track,
+html.theme-modern::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html:not(.theme-retro)::-webkit-scrollbar-thumb,
+html.theme-modern::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+html:not(.theme-retro)::-webkit-scrollbar-thumb:hover,
+html.theme-modern::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
+
+html:not(.theme-retro).dark::-webkit-scrollbar-thumb,
+html.theme-modern.dark::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+html:not(.theme-retro).dark::-webkit-scrollbar-thumb:hover,
+html.theme-modern.dark::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
+
+/* 2. RETRO THEME SCROLLBAR (8-Bit, Chunky, Pixel-Art / Arcade Style) */
+html.theme-retro {
+  scrollbar-width: auto;
+  scrollbar-color: #d97706 #e7dfcc;
+}
+
+html.theme-retro.dark {
+  scrollbar-color: #39ff14 #051205;
+}
+
+html.theme-retro::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+/* Retro Light Mode Track & Thumb */
+html.theme-retro::-webkit-scrollbar-track {
+  background: #e7dfcc;
+  border-left: 2px solid #000000;
+  box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+html.theme-retro::-webkit-scrollbar-thumb {
+  background: #d97706;
+  border: 2px solid #000000;
+  border-radius: 0px !important;
+  box-shadow: inset 2px 2px 0px #fde68a, inset -2px -2px 0px #78350f;
+}
+
+html.theme-retro::-webkit-scrollbar-thumb:hover {
+  background: #b45309;
+  box-shadow: inset 2px 2px 0px #fde68a, inset -2px -2px 0px #451a03;
+}
+
+/* Retro Dark Mode Track & Thumb (Phosphor CRT Neon) */
+html.theme-retro.dark::-webkit-scrollbar-track {
+  background: #051205;
+  border-left: 2px solid #14532d;
+  box-shadow: inset 2px 2px 0px rgba(0, 255, 0, 0.05);
+}
+
+html.theme-retro.dark::-webkit-scrollbar-thumb {
+  background: #39ff14;
+  border: 2px solid #000000;
+  border-radius: 0px !important;
+  box-shadow: inset 2px 2px 0px #e6ffe6, inset -2px -2px 0px #008000;
+}
+
+html.theme-retro.dark::-webkit-scrollbar-thumb:hover {
+  background: #00ff66;
+  box-shadow: 0 0 8px #39ff14, inset 2px 2px 0px #ffffff, inset -2px -2px 0px #004d00;
+}
+
+/* Retro Scrollbar Buttons (Up / Down arcade buttons) */
+html.theme-retro::-webkit-scrollbar-button:single-button:vertical:decrement {
+  height: 14px;
+  width: 14px;
+  background-color: #d97706;
+  border: 2px solid #000000;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' shape-rendering='crispEdges'><polygon points='5,2 2,7 8,7' fill='%23000000'/></svg>");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+html.theme-retro::-webkit-scrollbar-button:single-button:vertical:increment {
+  height: 14px;
+  width: 14px;
+  background-color: #d97706;
+  border: 2px solid #000000;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' shape-rendering='crispEdges'><polygon points='5,8 2,3 8,3' fill='%23000000'/></svg>");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+html.theme-retro.dark::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background-color: #39ff14;
+  border: 2px solid #000000;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' shape-rendering='crispEdges'><polygon points='5,2 2,7 8,7' fill='%23000000'/></svg>");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+html.theme-retro.dark::-webkit-scrollbar-button:single-button:vertical:increment {
+  background-color: #39ff14;
+  border: 2px solid #000000;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' shape-rendering='crispEdges'><polygon points='5,8 2,3 8,3' fill='%23000000'/></svg>");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* Offset for fixed navbar */
 section[id] {
   scroll-margin-top: 80px;
@@ -184,6 +327,19 @@ section[id] {
   transition-duration: 0.05s !important;
 }
 
+/* Ensure all decorative pixel sprites never block pointer events */
+.theme-retro img.pixelated,
+.theme-retro .animate-pacman,
+.theme-retro .animate-kirby,
+.theme-retro .animate-mario,
+.theme-retro .animate-sonic,
+.theme-retro .animate-bat,
+.theme-retro .animate-bulbasaur,
+.theme-retro .animate-megaman {
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
 /* Retro theme colors (Light Mode) */
 html.theme-retro {
   --background: 43 37% 90%; /* Soft GameBoy-like beige background */
@@ -227,6 +383,76 @@ html.theme-retro::after {
   background-size: 100% 4px;
   z-index: 99999;
   pointer-events: none;
+}
+
+/* ==========================================================================
+   RETRO PIXEL CURSORS
+   ========================================================================== */
+
+/* Light Mode Retro Cursors */
+html.theme-retro,
+html.theme-retro body,
+html.theme-retro * {
+  cursor:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' shape-rendering='crispEdges'%3E%3Cpath fill='%23000000' d='M0 0v19l5-5 3.5 8 3.5-1.5-3.5-8H14L0 0z'/%3E%3Cpath fill='%23ffffff' d='M2 3v13.5l3.5-3.5 3.5 8 1.5-0.7-3.5-8H11L2 3z'/%3E%3C/svg%3E")
+      0 0,
+    auto !important;
+}
+
+html.theme-retro a,
+html.theme-retro button,
+html.theme-retro [role="button"],
+html.theme-retro input[type="submit"],
+html.theme-retro input[type="button"],
+html.theme-retro select {
+  cursor:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' shape-rendering='crispEdges'%3E%3Cpath fill='%23000000' d='M6 0h4v6h2v2h2v2h2v7h-1v2h-1v2h-2v1H6v-1H4v-3H2V9h2v6h2V0z'/%3E%3Cpath fill='%23ffffff' d='M7 1h2v6h2v2h2v2h2v5h-1v2h-1v2h-2v-1H7v-1H5v-3H3v-4h2v6h2V1z'/%3E%3C/svg%3E")
+      7 1,
+    pointer !important;
+}
+
+html.theme-retro input[type="text"],
+html.theme-retro input[type="email"],
+html.theme-retro input[type="password"],
+html.theme-retro input[type="search"],
+html.theme-retro textarea {
+  cursor:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' shape-rendering='crispEdges'%3E%3Cpath fill='%23000000' d='M8 2h8v2h-3v7h3v2H8v-2h3V4H8V2z'/%3E%3Cpath fill='%23ffffff' d='M9 3h6v1h-2v7h2v1H9v-1h2V4H9V3z'/%3E%3C/svg%3E")
+      12 8,
+    text !important;
+}
+
+/* Dark Mode Retro Cursors (Phosphor CRT Neon Green) */
+html.theme-retro.dark,
+html.theme-retro.dark body,
+html.theme-retro.dark * {
+  cursor:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' shape-rendering='crispEdges'%3E%3Cpath fill='%23000000' d='M0 0v19l5-5 3.5 8 3.5-1.5-3.5-8H14L0 0z'/%3E%3Cpath fill='%2339ff14' d='M2 3v13.5l3.5-3.5 3.5 8 1.5-0.7-3.5-8H11L2 3z'/%3E%3C/svg%3E")
+      0 0,
+    auto !important;
+}
+
+html.theme-retro.dark a,
+html.theme-retro.dark button,
+html.theme-retro.dark [role="button"],
+html.theme-retro.dark input[type="submit"],
+html.theme-retro.dark input[type="button"],
+html.theme-retro.dark select {
+  cursor:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' shape-rendering='crispEdges'%3E%3Cpath fill='%23000000' d='M6 0h4v6h2v2h2v2h2v7h-1v2h-1v2h-2v1H6v-1H4v-3H2V9h2v6h2V0z'/%3E%3Cpath fill='%2339ff14' d='M7 1h2v6h2v2h2v2h2v5h-1v2h-1v2h-2v-1H7v-1H5v-3H3v-4h2v6h2V1z'/%3E%3C/svg%3E")
+      7 1,
+    pointer !important;
+}
+
+html.theme-retro.dark input[type="text"],
+html.theme-retro.dark input[type="email"],
+html.theme-retro.dark input[type="password"],
+html.theme-retro.dark input[type="search"],
+html.theme-retro.dark textarea {
+  cursor:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' shape-rendering='crispEdges'%3E%3Cpath fill='%23000000' d='M8 2h8v2h-3v7h3v2H8v-2h3V4H8V2z'/%3E%3Cpath fill='%2339ff14' d='M9 3h6v1h-2v7h2v1H9v-1h2V4H9V3z'/%3E%3C/svg%3E")
+      12 8,
+    text !important;
 }
 
 /* Retro custom styling overrides for interactive elements */
@@ -423,7 +649,8 @@ html.theme-retro::after {
 }
 
 @keyframes sparkle-blink {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.2;
     transform: scale(0.5);
   }
@@ -612,39 +839,48 @@ html.theme-retro::after {
 }
 
 .animate-pacman {
-  animation: pacman-patrol 20s linear infinite;
+  animation: pacman-screen-patrol 26s linear infinite;
 }
 
-@keyframes pacman-patrol {
+@keyframes pacman-screen-patrol {
+  /* 1. Bottom edge: Walking RIGHT from bottom-left to bottom-right (safe distance from scrollbar) */
   0% {
-    transform: translateX(-50px) translateY(0) rotate(0deg);
+    transform: translate(0, 0) rotate(0deg);
   }
-  40% {
-    transform: translateX(100vw) translateY(0) rotate(0deg);
+  31% {
+    transform: translate(calc(100vw - 72px), 0) rotate(0deg);
   }
-  40.01% {
-    transform: translateX(100vw) translateY(0) rotate(-90deg);
+  /* Corner 1: Turn UP */
+  31.5% {
+    transform: translate(calc(100vw - 72px), 0) rotate(-90deg);
   }
-  45% {
-    transform: translateX(100vw) translateY(-38px) rotate(-90deg);
+
+  /* 2. Right edge: Walking UP from bottom-right to top-right */
+  49.5% {
+    transform: translate(calc(100vw - 72px), calc(-100vh + 56px)) rotate(-90deg);
   }
-  45.01% {
-    transform: translateX(100vw) translateY(-38px) rotate(180deg);
+  /* Corner 2: Turn LEFT */
+  50% {
+    transform: translate(calc(100vw - 72px), calc(-100vh + 56px))
+      rotate(-180deg);
   }
-  85% {
-    transform: translateX(-50px) translateY(-38px) rotate(180deg);
+
+  /* 3. Top edge: Walking LEFT from top-right to top-left (visibly above the navbar) */
+  81% {
+    transform: translate(0, calc(-100vh + 56px)) rotate(-180deg);
   }
-  85.01% {
-    transform: translateX(-50px) translateY(-38px) rotate(90deg);
+  /* Corner 3: Turn DOWN */
+  81.5% {
+    transform: translate(0, calc(-100vh + 56px)) rotate(-270deg);
   }
-  90% {
-    transform: translateX(-50px) translateY(0) rotate(90deg);
+
+  /* 4. Left edge: Walking DOWN from top-left back to bottom-left */
+  99.5% {
+    transform: translate(0, 0) rotate(-270deg);
   }
-  90.01% {
-    transform: translateX(-50px) translateY(0) rotate(0deg);
-  }
+  /* Corner 4: Turn RIGHT (ready for next cycle) */
   100% {
-    transform: translateX(-50px) translateY(0) rotate(0deg);
+    transform: translate(0, 0) rotate(-360deg);
   }
 }
 
@@ -674,6 +910,6 @@ html.theme-retro::after {
     animation-duration: 8.4s;
   }
   .animate-pacman {
-    animation-duration: 8s;
+    animation-duration: 18s;
   }
 }
